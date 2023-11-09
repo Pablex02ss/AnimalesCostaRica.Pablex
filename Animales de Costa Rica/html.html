@@ -10,8 +10,19 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f0f0;
       color: #333;
+    }
+
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: -1; /* Asegura que el video esté detrás del contenido */
     }
 
     header {
@@ -19,17 +30,21 @@
       padding: 40px;
       text-align: center;
       color: white;
+      position: relative; /* Asegura que el contenido del encabezado esté encima del video */
+      z-index: 1;
     }
 
     section {
       max-width: 800px;
       margin: 0 auto;
       padding: 40px;
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para mejorar la legibilidad */
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 20px rgb(0, 0, 0);
       margin-top: -60px;
       margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -73,7 +88,9 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-    }
+      z-index: 2; /* Asegura que el pie de página esté sobre el video y el contenido */
+}
+    
 
     footer p {
       margin: 0;
@@ -82,6 +99,12 @@
 </head>
 
 <body>
+
+  <video autoplay muted loop>
+    <!-- Reemplaza 'video.mp4' con la ruta de tu video -->
+    <source src="Iliminacion azul fondo hd effectsyoutube com.mp4" type="video/mp4">
+    Tu navegador no admite el elemento de video.
+  </video>
 
   <header>
     <h1>Descubre la Fauna de Costa Rica</h1>
@@ -95,6 +118,16 @@
     <img src="Puma.jpg" alt="Puma en Costa Rica">
     <p>El puma, también conocido como león de montaña, es un majestuoso felino que habita en las selvas y bosques de Costa Rica. Su elegancia y destreza lo convierten en uno de los depredadores más emblemáticos de la región.</p>
   </section>
+
+  <!-- Agrega más secciones según sea necesario -->
+
+  <footer>
+    <p>&copy; 2023 Animales de Costa Rica | Pablex02s</p>
+  </footer>
+
+</body>
+
+</html>
 
   <section>
     <h2>Quetzal</h2>
@@ -148,9 +181,8 @@
   
 
 
-  <footer>
-    <p>&copy; 2023 Animales de Costa Rica   |Pablex02s</p>
-    
+   <footer>
+    <p>&copy; 2023 Animales de Costa Rica | Pablex02s</p>
   </footer>
 
 </body>
